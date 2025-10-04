@@ -1,0 +1,1 @@
+// workPermit.types.ts

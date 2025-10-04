@@ -1,0 +1,1 @@
+// useGPSTagging.ts

@@ -1,0 +1,1 @@
+// VendorMarker.tsx

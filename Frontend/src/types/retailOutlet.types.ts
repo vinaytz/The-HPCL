@@ -1,0 +1,1 @@
+// retailOutlet.types.ts
