@@ -1,5 +1,17 @@
 const ComplaintModel =  require("../models/Complaint.model")
 
+function getFormOptions(req, res){
+  const complaintTypeOptions = ComplaintModel.schema.path("complaintType").enumValues;
+  const assetDUOptions = ComplaintModel.schema.path("assetDU").enumValues;
+  const natureOfComplaintOptions = ComplaintModel.schema.path("natureOfComplaint").enumValues;
+
+  res.json({
+    complaintType: complaintTypeOptions,
+    assetDU: assetDUOptions,
+    natureOfComplaint: natureOfComplaintOptions,
+  });
+}
+
 async function createComplaint(req, res) {
   try {
     console.log(req.body)
@@ -53,6 +65,7 @@ async function deleteComplaint(req, res) {
 }
 
 module.exports =  {
+  getFormOptions,
   createComplaint,
   getComplaints,
   getComplaintById,

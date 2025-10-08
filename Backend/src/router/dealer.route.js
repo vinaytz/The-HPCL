@@ -2,6 +2,7 @@ const express = require("express")
 const dealerfunc = require("../controllers/dealer.controller")
 const router = express.Router()
 
+router.get("/getFormOptions", dealerfunc.getFormOptions);
 router.post("/createComplaint", dealerfunc.createComplaint);
 router.get("/getComplaints", dealerfunc.getComplaints);
 router.get("/getComplaintById/:id", dealerfunc.getComplaintById);
